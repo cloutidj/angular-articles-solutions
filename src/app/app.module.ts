@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SmartDumbSplitModule } from './smart-dumb/split/split.module';
 import { SmartDumbCombinedModule } from './smart-dumb/combined/combined.module';
 import { ComponentTestingModule } from './component-testing/component-testing.module';
+import { ContentProjectionModule } from './content-projection/content-projection.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ComponentTestingModule } from './component-testing/component-testing.mo
     AppRoutingModule,
     NgbModule,
     ComponentTestingModule,
+    ContentProjectionModule,
     SmartDumbCombinedModule
     //SmartDumbSplitModule
   ],
