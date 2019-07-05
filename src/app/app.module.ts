@@ -1,27 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { AppRoutingModule } from './app-routing.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AppRouting } from './app.routing';
 import { AppComponent } from './app.component';
 import { SmartDumbSplitModule } from './smart-dumb/split/split.module';
 import { SmartDumbCombinedModule } from './smart-dumb/combined/combined.module';
 import { ComponentTestingModule } from './component-testing/component-testing.module';
 import { ContentProjectionModule } from './content-projection/content-projection.module';
+import { RouterReuseModule } from './router-reuse/router-reuse.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    NgbModule,
-    ComponentTestingModule,
-    ContentProjectionModule,
-    SmartDumbCombinedModule
-    //SmartDumbSplitModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent
+	],
+	imports: [
+		BrowserModule,
+		AppRouting,
+		NgbModule,
+		ComponentTestingModule,
+		ContentProjectionModule,
+		RouterReuseModule,
+		SmartDumbCombinedModule
+		//SmartDumbSplitModule
+	],
+	providers: [],
+	bootstrap: [ AppComponent ]
 })
-export class AppModule { }
+export class AppModule {}
+
