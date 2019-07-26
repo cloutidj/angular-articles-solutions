@@ -8,6 +8,7 @@ import { SmartDumbCombinedModule } from './smart-dumb/combined/combined.module';
 import { ComponentTestingModule } from './component-testing/component-testing.module';
 import { ContentProjectionModule } from './content-projection/content-projection.module';
 import { RouterReuseModule } from './router-reuse/router-reuse.module';
+import { ComponentScopeModule } from './component-scope/component-scope.module';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { RouterReuseModule } from './router-reuse/router-reuse.module';
 		AppRouting,
 		NgbModule,
 		ComponentTestingModule,
+		ComponentScopeModule,
 		ContentProjectionModule,
 		RouterReuseModule,
 		SmartDumbCombinedModule

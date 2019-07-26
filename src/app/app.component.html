@@ -1,31 +1,34 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <div class="navbar-brand">Angular Test Bed</div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+	<div class="navbar-brand">Angular Test Bed</div>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+		<span class="navbar-toggler-icon"></span>
+	</button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/smart-dumb']">Smart / Dumb</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/component-testing']">Component Testing</a>
-      </li>
-      <li class="nav-item" routerLinkActive="active">
-        <a class="nav-link" [routerLink]="['/content-projection']">Content Projection</a>
-      </li>
-		<li class="nav-item" routerLinkActive="active">
-			<a class="nav-link" [routerLink]="['/router-reuse']">Router Reuse</a>
-		</li>
-    </ul>
-  </div>
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="['/smart-dumb']">Smart / Dumb</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="['/component-testing']">Component Testing</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="['/content-projection']">Content Projection</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="['/router-reuse']">Router Reuse</a>
+			</li>
+			<li class="nav-item" routerLinkActive="active">
+				<a class="nav-link" [routerLink]="['/component-scope']">Component Scope</a>
+			</li>
+		</ul>
+	</div>
 </nav>
 
 <div class="container pt-3">
-  <div class="row">
-    <div class="col">
-      <router-outlet></router-outlet>
-    </div>
-  </div>
+	<div class="row">
+		<div class="col">
+			<router-outlet></router-outlet>
+		</div>
+	</div>
 </div>
