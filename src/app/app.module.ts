@@ -10,6 +10,7 @@ import { ContentProjectionModule } from './content-projection/content-projection
 import { RouterReuseModule } from './router-reuse/router-reuse.module';
 import { ComponentScopeModule } from './component-scope/component-scope.module';
 import { ComponentChilrenModule } from './component-children/component-chilren.module';
+import { AsyncModule } from './async/async.module';
 
 @NgModule({
 	declarations: [
@@ -19,6 +20,7 @@ import { ComponentChilrenModule } from './component-children/component-chilren.m
 		BrowserModule,
 		AppRouting,
 		NgbModule,
+		AsyncModule,
 		ComponentChilrenModule,
 		ComponentTestingModule,
 		ComponentScopeModule,

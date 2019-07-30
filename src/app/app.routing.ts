@@ -6,6 +6,7 @@ import { SampleComponent } from './content-projection/sample.component';
 import { RouterReuseComponent } from './router-reuse/router-reuse.component';
 import { ComponentScopeComponent } from './component-scope/component-scope.component';
 import { ComponentChildrenComponent } from './component-children/component-children.component';
+import { AsyncComponent } from './async/async.component';
 //import { SearchComponent } from './smart-dumb/split/split-search.component';
 
 const routes: Routes = [
@@ -32,6 +33,10 @@ const routes: Routes = [
 	{
 		path: 'component-children',
 		component: ComponentChildrenComponent
+	},
+	{
+		path: 'async',
+		component: AsyncComponent
 	}
 ];
 
