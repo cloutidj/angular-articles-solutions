@@ -1,43 +1,53 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-	<div class="navbar-brand">Angular Test Bed</div>
-	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+<nav class="navbar navbar-dark bg-dark justify-content-start">
+	<button class="navbar-toggler" type="button" (click)="showSidebar = !showSidebar">
 		<span class="navbar-toggler-icon"></span>
 	</button>
-
-	<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		<ul class="navbar-nav mr-auto">
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/smart-dumb']">Smart / Dumb</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/component-testing']">Component Testing</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/content-projection']">Content Projection</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/router-reuse']">Router Reuse</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/component-scope']">Component Scope</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/component-children']">Component View / Content Child</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/async']">Async</a>
-			</li>
-			<li class="nav-item" routerLinkActive="active">
-				<a class="nav-link" [routerLink]="['/dynamic-creation']">Dynamic Component Creation</a>
-			</li>
-		</ul>
-	</div>
+	<div class="navbar-brand px-2">Angular Test Bed</div>
 </nav>
 
-<div class="container pt-3">
-	<div class="row">
-		<div class="col">
-			<router-outlet></router-outlet>
-		</div>
+<div class="wrapper">
+	<nav id="sidebar" class="bg-light text-dark p-3" [ngClass]="{'active': showSidebar}">
+		<h3>
+			<fa-icon class="pr-2" [icon]="faNewspaper"></fa-icon> Article Demos
+		</h3>
+		<ul class="nav flex-column nav-pills">
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/smart-dumb']" routerLinkActive="active">Smart / Dumb</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/content-projection']" routerLinkActive="active">
+					Content Projection
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/async']" routerLinkActive="active">Async</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-children']" routerLinkActive="active">
+					View / Content Child
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/dynamic-creation']" routerLinkActive="active">
+					Dynamic Component Creation
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-scope']" routerLinkActive="active">Component Scope</a>
+			</li>
+
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/router-reuse']" routerLinkActive="active">Router Reuse</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" [routerLink]="['/component-testing']" routerLinkActive="active">Component
+					Testing</a>
+			</li>
+		</ul>
+	</nav>
+
+	<div id="content" class="container-fluid p-3">
+		<router-outlet></router-outlet>
 	</div>
+
 </div>

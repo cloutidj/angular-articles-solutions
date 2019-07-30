@@ -15,17 +15,19 @@ import { ComponentRequest } from './create-request.component';
 @Component({
 	selector: 'app-dynamic-component-creation',
 	template: `
-		<div class="row">
-			<app-create-request class="col" [viewPorts]="viewPorts" (createComponent)="addToViewport($event)"></app-create-request>
-		</div>
-		<div class="row card-deck justify-content-between">
-			<div class="col-6" *ngFor="let port of viewPorts">
-				<div class="card mt-3">
-					<div class="card-header">
-						<h3>View Port #{{port}}</h3>
-					</div>
-					<div class="card-body">
-						<ng-template #componentTarget></ng-template>
+		<div class="container-fluid">
+			<div class="row">
+				<app-create-request class="col" [viewPorts]="viewPorts" (createComponent)="addToViewport($event)"></app-create-request>
+			</div>
+			<div class="row card-deck justify-content-between">
+				<div class="col-6" *ngFor="let port of viewPorts">
+					<div class="card mt-3">
+						<div class="card-header">
+							<h3>View Port #{{port}}</h3>
+						</div>
+						<div class="card-body">
+							<ng-template #componentTarget></ng-template>
+						</div>
 					</div>
 				</div>
 			</div>

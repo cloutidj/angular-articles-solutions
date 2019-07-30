@@ -1,4 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRouting } from './app.routing';
@@ -19,6 +20,7 @@ import { DynamicComponentCreationModule } from './dynamic-component-creation/dyn
 	],
 	imports: [
 		BrowserModule,
+		FontAwesomeModule,
 		AppRouting,
 		NgbModule,
 		AsyncModule,

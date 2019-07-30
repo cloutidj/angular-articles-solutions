@@ -3,17 +3,19 @@ import { Component } from '@angular/core';
 @Component({
 	selector: 'app-component-children',
 	template: `
-		<div class="container-fluid">
-			<div class="row">
-				<div class="col-auto">
-					<nav class="nav flex-column">
+		<div class="card">
+			<div class="card-header">
+				<ul class="nav nav-tabs card-header-tabs">
+					<li class="nav-item">
 						<a class="nav-link" [routerLink]="['/component-children','view-child']" routerLinkActive="active">ViewChild</a>
+					</li>
+					<li class="nav-item">
 						<a class="nav-link" [routerLink]="['/component-children','content-child']" routerLinkActive="active">ContentChild</a>
-					</nav>
-				</div>
-				<div class="col">
-					<router-outlet></router-outlet>
-				</div>
+					</li>
+				</ul>
+			</div>
+			<div class="card-body">
+				<router-outlet></router-outlet>
 			</div>
 		</div>`
 })
