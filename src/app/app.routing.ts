@@ -5,6 +5,7 @@ import { ReportComponent } from './component-testing/report.component';
 import { SampleComponent } from './content-projection/sample.component';
 import { RouterReuseComponent } from './router-reuse/router-reuse.component';
 import { ComponentScopeComponent } from './component-scope/component-scope.component';
+import { ComponentChildrenComponent } from './component-children/component-children.component';
 //import { SearchComponent } from './smart-dumb/split/split-search.component';
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
 	{
 		path: 'component-scope',
 		component: ComponentScopeComponent
+	},
+	{
+		path: 'component-children',
+		component: ComponentChildrenComponent
 	}
 ];
 

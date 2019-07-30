@@ -9,6 +9,7 @@ import { ComponentTestingModule } from './component-testing/component-testing.mo
 import { ContentProjectionModule } from './content-projection/content-projection.module';
 import { RouterReuseModule } from './router-reuse/router-reuse.module';
 import { ComponentScopeModule } from './component-scope/component-scope.module';
+import { ComponentChilrenModule } from './component-children/component-chilren.module';
 
 @NgModule({
 	declarations: [
@@ -18,6 +19,7 @@ import { ComponentScopeModule } from './component-scope/component-scope.module';
 		BrowserModule,
 		AppRouting,
 		NgbModule,
+		ComponentChilrenModule,
 		ComponentTestingModule,
 		ComponentScopeModule,
 		ContentProjectionModule,
