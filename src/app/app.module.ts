@@ -11,6 +11,7 @@ import { RouterReuseModule } from './router-reuse/router-reuse.module';
 import { ComponentScopeModule } from './component-scope/component-scope.module';
 import { ComponentChilrenModule } from './component-children/component-chilren.module';
 import { AsyncModule } from './async/async.module';
+import { DynamicComponentCreationModule } from './dynamic-component-creation/dynamic-component-creation.module';
 
 @NgModule({
 	declarations: [
@@ -25,6 +26,7 @@ import { AsyncModule } from './async/async.module';
 		ComponentTestingModule,
 		ComponentScopeModule,
 		ContentProjectionModule,
+		DynamicComponentCreationModule,
 		RouterReuseModule,
 		SmartDumbCombinedModule
 		//SmartDumbSplitModule

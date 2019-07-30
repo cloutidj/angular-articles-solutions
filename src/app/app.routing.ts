@@ -7,6 +7,7 @@ import { RouterReuseComponent } from './router-reuse/router-reuse.component';
 import { ComponentScopeComponent } from './component-scope/component-scope.component';
 import { ComponentChildrenComponent } from './component-children/component-children.component';
 import { AsyncComponent } from './async/async.component';
+import { DynamicComponentCreationComponent } from './dynamic-component-creation/dynamic-component-creation.component';
 //import { SearchComponent } from './smart-dumb/split/split-search.component';
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
 	{
 		path: 'async',
 		component: AsyncComponent
+	},
+	{
+		path: 'dynamic-creation',
+		component: DynamicComponentCreationComponent
 	}
 ];
 
