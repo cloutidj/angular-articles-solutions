@@ -8,12 +8,21 @@ import { ComponentScopeComponent } from './component-scope/component-scope.compo
 import { ComponentChildrenComponent } from './component-children/component-children.component';
 import { AsyncComponent } from './async/async.component';
 import { DynamicComponentCreationComponent } from './dynamic-component-creation/dynamic-component-creation.component';
+import { ControlValueAccessorComponent } from './control-value-accessor/control-value-accessor.component';
 //import { SearchComponent } from './smart-dumb/split/split-search.component';
 
 const routes: Routes = [
 	{
-		path: 'smart-dumb',
-		component: SearchComponent
+		path: 'async',
+		component: AsyncComponent
+	},
+	{
+		path: 'component-children',
+		component: ComponentChildrenComponent
+	},
+	{
+		path: 'component-scope',
+		component: ComponentScopeComponent
 	},
 	{
 		path: 'component-testing',
@@ -24,29 +33,25 @@ const routes: Routes = [
 		component: SampleComponent
 	},
 	{
-		path: 'router-resuse',
-		component: RouterReuseComponent
-	},
-	{
-		path: 'component-scope',
-		component: ComponentScopeComponent
-	},
-	{
-		path: 'component-children',
-		component: ComponentChildrenComponent
-	},
-	{
-		path: 'async',
-		component: AsyncComponent
+		path: 'control-value-accessor',
+		component: ControlValueAccessorComponent
 	},
 	{
 		path: 'dynamic-creation',
 		component: DynamicComponentCreationComponent
-	}
+	},
+	{
+		path: 'router-resuse',
+		component: RouterReuseComponent
+	},
+	{
+		path: 'smart-dumb',
+		component: SearchComponent
+	},
 ];
 
 @NgModule({
-	imports: [ RouterModule.forRoot(routes) ],
-	exports: [ RouterModule ]
+	imports: [RouterModule.forRoot(routes)],
+	exports: [RouterModule]
 })
-export class AppRouting {}
+export class AppRouting { }

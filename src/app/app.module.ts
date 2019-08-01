@@ -13,6 +13,7 @@ import { ComponentScopeModule } from './component-scope/component-scope.module';
 import { ComponentChilrenModule } from './component-children/component-chilren.module';
 import { AsyncModule } from './async/async.module';
 import { DynamicComponentCreationModule } from './dynamic-component-creation/dynamic-component-creation.module';
+import { ControlValueAccessorModule } from './control-value-accessor/control-value-accessor.module';
 
 @NgModule({
 	declarations: [
@@ -28,6 +29,7 @@ import { DynamicComponentCreationModule } from './dynamic-component-creation/dyn
 		ComponentTestingModule,
 		ComponentScopeModule,
 		ContentProjectionModule,
+		ControlValueAccessorModule,
 		DynamicComponentCreationModule,
 		RouterReuseModule,
 		SmartDumbCombinedModule
