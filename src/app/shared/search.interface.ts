@@ -1,3 +1,3 @@
 export interface SearchInterface {
-    searchTerm: string;
+	searchTerm: string;
 }

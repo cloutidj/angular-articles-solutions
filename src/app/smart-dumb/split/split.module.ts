@@ -8,23 +8,20 @@ import { SearchResultsComponent } from './search-results.component';
 import { ItemComponent } from './item.component';
 
 @NgModule({
-    declarations: [
-        SearchComponent,
-        SearchFormComponent,
-        SearchResultsComponent,
-        ItemComponent
-    ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        NgbModule
-    ],
-    exports: [
-        SearchComponent,
-        BrowserModule,
-        ReactiveFormsModule,
-        NgbModule
-    ],
-    providers: []
+	declarations: [
+		SearchComponent,
+		SearchFormComponent,
+		SearchResultsComponent,
+		ItemComponent
+	],
+	imports: [
+		BrowserModule,
+		ReactiveFormsModule,
+		NgbModule
+	],
+	exports: [
+		SearchComponent
+	],
+	providers: []
 })
 export class SmartDumbSplitModule { }

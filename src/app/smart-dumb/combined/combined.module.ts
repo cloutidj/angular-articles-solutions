@@ -5,20 +5,17 @@ import { SearchComponent } from './combined-search.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-    declarations: [
-        SearchComponent
-    ],
-    imports: [
-        BrowserModule,
-        ReactiveFormsModule,
-        NgbModule
-    ],
-    exports: [
-        SearchComponent,
-        BrowserModule,
-        ReactiveFormsModule,
-        NgbModule
-    ],
-    providers: []
+	declarations: [
+		SearchComponent
+	],
+	imports: [
+		BrowserModule,
+		ReactiveFormsModule,
+		NgbModule
+	],
+	exports: [
+		SearchComponent
+	],
+	providers: []
 })
 export class SmartDumbCombinedModule { }

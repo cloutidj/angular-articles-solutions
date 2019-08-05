@@ -8,23 +8,23 @@ import { ReportInputComponent } from './report-input.component';
 import { ReportResultsComponent } from './report-results.component';
 
 @NgModule({
-    declarations: [
-        ReportComponent,
-        ReportCriteriaComponent,
-        ReportInputComponent,
-        ReportResultsComponent
-    ],
-    imports: [
-        BrowserModule,
-        FormsModule,
-        NgbModule
-    ],
-    exports: [
-        ReportComponent,
-        BrowserModule,
-        FormsModule,
-        NgbModule
-    ],
-    providers: []
+	declarations: [
+		ReportComponent,
+		ReportCriteriaComponent,
+		ReportInputComponent,
+		ReportResultsComponent
+	],
+	imports: [
+		BrowserModule,
+		FormsModule,
+		NgbModule
+	],
+	exports: [
+		ReportComponent,
+		BrowserModule,
+		FormsModule,
+		NgbModule
+	],
+	providers: []
 })
 export class ComponentTestingModule { }

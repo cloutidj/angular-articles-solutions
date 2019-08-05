@@ -3,8 +3,8 @@ import { SearchInterface } from '../shared/search.interface';
 import { ReportCriteriaFormInterface } from './report-criteria-form.interface';
 
 @Component({
-    selector: 'app-report-criteria',
-    template: `
+	selector: 'app-report-criteria',
+	template: `
         <div class="form-group">
             <label for="keyword">Keyword</label>
             <input class="form-control" id="keyword" [(ngModel)]="keyword" />
@@ -12,21 +12,21 @@ import { ReportCriteriaFormInterface } from './report-criteria-form.interface';
         </div>`
 })
 export class ReportCriteriaComponent implements ReportCriteriaFormInterface<SearchInterface> {
-    public invalid = false;
-    public keyword: string;
+	public invalid = false;
+	public keyword: string;
 
-    public validateCriteria() {
-        if (Math.random() > 0.5) {
-            this.invalid = true;
-            return false;
-        }
+	public validateCriteria() {
+		if (Math.random() > 0.5) {
+			this.invalid = true;
+			return false;
+		}
 
-        return true;
-    }
+		return true;
+	}
 
-    public getSearchCriteria(): SearchInterface {
-        return {
-            searchTerm: this.keyword
-        }
-    }
+	public getSearchCriteria(): SearchInterface {
+		return {
+			searchTerm: this.keyword
+		};
+	}
 }

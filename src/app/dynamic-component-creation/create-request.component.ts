@@ -2,7 +2,7 @@ import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 export interface ComponentRequest {
 	contextType: 'primary' | 'secondary' | 'success' | 'warning' | 'danger';
-	componentType: 'button' | 'alert' ;
+	componentType: 'button' | 'alert';
 	viewPort: number;
 }
 
@@ -48,7 +48,7 @@ export interface ComponentRequest {
 export class CreateRequestComponent {
 	@Input() viewPorts: number[];
 	@Output() createComponent = new EventEmitter<ComponentRequest>();
-	public viewPort: number = 0;
+	public viewPort = 0;
 	public componentType: 'button' | 'alert' = 'button';
 	public contextType: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' = 'primary';
 

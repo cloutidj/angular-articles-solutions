@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-    selector: 'app-project-multiple-card',
-    template: `
+	selector: 'app-project-multiple-card',
+	template: `
         <div class="card">
             <h5 class="card-header">
                 <ng-content select="[header]"></ng-content>

@@ -1,8 +1,8 @@
 import { Input, Component } from '@angular/core';
 
 @Component({
-    selector: 'app-input-title-card',
-    template: `
+	selector: 'app-input-title-card',
+	template: `
         <div class="card">
             <h5 class="card-header">
                 {{headerText}}
@@ -13,6 +13,6 @@ import { Input, Component } from '@angular/core';
         </div>`
 })
 export class InputTitleCardComponent {
-    @Input() bodyText: string;
-    @Input() headerText: string;
+	@Input() bodyText: string;
+	@Input() headerText: string;
 }

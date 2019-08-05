@@ -5,8 +5,8 @@ import { SearchService } from '../../shared/search.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-    selector: 'app-search',
-    template: `
+	selector: 'app-search',
+	template: `
         <div class="row">
             <div class="col">
                 <app-search-form [default]="init" (search)="search($event)"></app-search-form>
@@ -22,23 +22,23 @@ import { ActivatedRoute } from '@angular/router';
         </div>`
 })
 export class SearchComponent implements OnInit {
-    public init: SearchInterface;
-    public items: ItemInterface[];
-    public searching = false;
+	public init: SearchInterface;
+	public items: ItemInterface[];
+	public searching = false;
 
-    constructor(private searchService: SearchService, private route: ActivatedRoute) { }
+	constructor(private searchService: SearchService, private route: ActivatedRoute) { }
 
-    ngOnInit() {
-        this.route.queryParams.subscribe(params => {
-            this.init = params as SearchInterface;
-        });
-    }
+	ngOnInit() {
+		this.route.queryParams.subscribe(params => {
+			this.init = params as SearchInterface;
+		});
+	}
 
-    search(criteria: SearchInterface) {
-        this.searching = true;
-        this.searchService.search(criteria).subscribe(data => {
-            this.items = data;
-            this.searching = false;
-        });
-    }
+	search(criteria: SearchInterface) {
+		this.searching = true;
+		this.searchService.search(criteria).subscribe(data => {
+			this.items = data;
+			this.searching = false;
+		});
+	}
 }

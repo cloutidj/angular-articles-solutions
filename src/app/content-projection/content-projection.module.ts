@@ -11,23 +11,23 @@ import { CardBodyComponent } from './card-body.component';
 import { MultipleLocationsCardComponent } from './multiple-locations-card.component';
 
 @NgModule({
-    declarations: [
-        SampleComponent,
-        InputCardComponent,
-        InputTitleCardComponent,
-        ProjectBodyCardComponent,
-        ProjectMultipleCardComponent,
-        ProjectComponentCardComponent,
-        CardHeadingComponent,
-        CardBodyComponent,
-        MultipleLocationsCardComponent
-    ],
-    imports: [
-        BrowserModule
-    ],
-    exports: [
-        SampleComponent
-    ],
-    providers: []
+	declarations: [
+		SampleComponent,
+		InputCardComponent,
+		InputTitleCardComponent,
+		ProjectBodyCardComponent,
+		ProjectMultipleCardComponent,
+		ProjectComponentCardComponent,
+		CardHeadingComponent,
+		CardBodyComponent,
+		MultipleLocationsCardComponent
+	],
+	imports: [
+		BrowserModule
+	],
+	exports: [
+		SampleComponent
+	],
+	providers: []
 })
 export class ContentProjectionModule { }

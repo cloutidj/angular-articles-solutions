@@ -1,8 +1,8 @@
 import { Input, Component } from '@angular/core';
 
 @Component({
-    selector: 'app-input-card',
-    template: `
+	selector: 'app-input-card',
+	template: `
         <div class="card">
             <div class="card-body">
                 {{bodyText}}
@@ -10,5 +10,5 @@ import { Input, Component } from '@angular/core';
         </div>`
 })
 export class InputCardComponent {
-    @Input() bodyText: string;
+	@Input() bodyText: string;
 }

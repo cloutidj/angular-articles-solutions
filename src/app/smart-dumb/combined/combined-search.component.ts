@@ -6,8 +6,8 @@ import { ItemInterface } from '../../shared/item.interface';
 import { SearchService } from '../../shared/search.service';
 
 @Component({
-    selector: 'app-search',
-    template: `
+	selector: 'app-search',
+	template: `
         <div class="row">
             <div class="col">
                 <form [formGroup]="searchForm">
@@ -31,32 +31,32 @@ import { SearchService } from '../../shared/search.service';
         </div>`
 })
 export class SearchComponent implements OnInit {
-    public items: ItemInterface[];
-    public searching = false;
-    public searchForm: FormGroup;
+	public items: ItemInterface[];
+	public searching = false;
+	public searchForm: FormGroup;
 
-    constructor(private formBuilder: FormBuilder, private searchService: SearchService, private route: ActivatedRoute) { }
+	constructor(private formBuilder: FormBuilder, private searchService: SearchService, private route: ActivatedRoute) { }
 
-    ngOnInit() {
-        this.route.queryParams.subscribe(params => {
-            this.buildForm(params as SearchInterface);
-        });
-    }
+	ngOnInit() {
+		this.route.queryParams.subscribe(params => {
+			this.buildForm(params as SearchInterface);
+		});
+	}
 
 
-    private buildForm(init: SearchInterface) {
-        this.searchForm = this.formBuilder.group({
-            searchTerm: [init.searchTerm, Validators.required]
-        });
-    }
+	private buildForm(init: SearchInterface) {
+		this.searchForm = this.formBuilder.group({
+			searchTerm: [init.searchTerm, Validators.required]
+		});
+	}
 
-    search() {
-        if (this.searchForm.valid) {
-            this.searching = true;
-            this.searchService.search(this.searchForm.value).subscribe(data => {
-                this.items = data;
-                this.searching = false;
-            });
-        }
-    }
+	search() {
+		if (this.searchForm.valid) {
+			this.searching = true;
+			this.searchService.search(this.searchForm.value).subscribe(data => {
+				this.items = data;
+				this.searching = false;
+			});
+		}
+	}
 }

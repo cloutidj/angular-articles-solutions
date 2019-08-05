@@ -33,7 +33,7 @@ import { ControlValueAccessorModule } from './control-value-accessor/control-val
 		DynamicComponentCreationModule,
 		RouterReuseModule,
 		SmartDumbCombinedModule
-		//SmartDumbSplitModule
+		// SmartDumbSplitModule
 	],
 	providers: [],
 	bootstrap: [ AppComponent ]

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-    template: `
+	template: `
         <app-input-card bodyText="This is some text within a card body."></app-input-card>
         <div class="m-3"></div>
         <app-input-title-card bodyText="This is some text within a card body." headerText="A sample card"></app-input-title-card>
@@ -30,7 +30,9 @@ import { Component } from '@angular/core';
         </app-project-multiple-card>
         <div class="m-3"></div>
         <app-project-component-card>
-            <app-card-heading textStyle="primary">Projected Heading <button class="btn btn-primary">With buttons!</button></app-card-heading>
+			<app-card-heading textStyle="primary">
+				Projected Heading <button class="btn btn-primary">With buttons!</button>
+			</app-card-heading>
             <app-card-body>
                 Now I <strong>can</strong> add <em>markup!</em >
                 <span class="badge badge-info">And Other Elements</span>

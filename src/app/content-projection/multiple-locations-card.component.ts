@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-    selector: 'app-multiple-locations-card',
-    template: `
+	selector: 'app-multiple-locations-card',
+	template: `
         <ng-template #content>
             <ng-content select="app-card-heading"></ng-content>
         </ng-template>
@@ -19,5 +19,5 @@ import { Component, Input } from '@angular/core';
         </div>`
 })
 export class MultipleLocationsCardComponent {
-    @Input() isHeader: boolean;
+	@Input() isHeader: boolean;
 }
