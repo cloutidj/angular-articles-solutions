@@ -14,6 +14,7 @@ import { ComponentChilrenModule } from './component-children/component-chilren.m
 import { AsyncModule } from './async/async.module';
 import { DynamicComponentCreationModule } from './dynamic-component-creation/dynamic-component-creation.module';
 import { ControlValueAccessorModule } from './control-value-accessor/control-value-accessor.module';
+import { ObservablesModule } from './observables/observables.module';
 
 @NgModule({
 	declarations: [
@@ -31,6 +32,7 @@ import { ControlValueAccessorModule } from './control-value-accessor/control-val
 		ContentProjectionModule,
 		ControlValueAccessorModule,
 		DynamicComponentCreationModule,
+		ObservablesModule,
 		RouterReuseModule,
 		SmartDumbCombinedModule
 		// SmartDumbSplitModule

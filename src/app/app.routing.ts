@@ -9,6 +9,7 @@ import { ComponentChildrenComponent } from './component-children/component-child
 import { AsyncComponent } from './async/async.component';
 import { DynamicComponentCreationComponent } from './dynamic-component-creation/dynamic-component-creation.component';
 import { ControlValueAccessorComponent } from './control-value-accessor/control-value-accessor.component';
+import { ObservablesComponent } from './observables/observables.component';
 // import { SearchComponent } from './smart-dumb/split/split-search.component';
 
 const routes: Routes = [
@@ -39,6 +40,10 @@ const routes: Routes = [
 	{
 		path: 'dynamic-creation',
 		component: DynamicComponentCreationComponent
+	},
+	{
+		path: 'observables',
+		component: ObservablesComponent
 	},
 	{
 		path: 'router-resuse',

@@ -10,10 +10,10 @@ import { SearchService } from '../../shared/search.service';
 	template: `
         <div class="row">
             <div class="col">
-                <form [formGroup]="searchForm">
+                <form [formGroup]="searchForm" [ngClass]="{'was-validated': attemptSearch}">
                     <div class="form-group">
                         <label for="searchTerm">Search</label>
-                        <input type="text" class="form-control" id="searchTerm" formControlName="searchTerm" />
+                        <input type="text" class="form-control" id="searchTerm" formControlName="searchTerm" required />
                     </div>
 
                     <button class="btn btn-primary" type="submit" (click)="search()">Search</button>
@@ -34,10 +34,12 @@ export class SearchComponent implements OnInit {
 	public items: ItemInterface[];
 	public searching = false;
 	public searchForm: FormGroup;
+	public attemptSearch: boolean;
 
 	constructor(private formBuilder: FormBuilder, private searchService: SearchService, private route: ActivatedRoute) { }
 
 	ngOnInit() {
+		this.attemptSearch = false;
 		this.route.queryParams.subscribe(params => {
 			this.buildForm(params as SearchInterface);
 		});
@@ -51,6 +53,7 @@ export class SearchComponent implements OnInit {
 	}
 
 	search() {
+		this.attemptSearch = true;
 		if (this.searchForm.valid) {
 			this.searching = true;
 			this.searchService.search(this.searchForm.value).subscribe(data => {
